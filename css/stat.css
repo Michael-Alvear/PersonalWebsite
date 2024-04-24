@@ -1,0 +1,365 @@
+@font-face {
+    font-family: Fallout;
+    src: url('../fonts/Gothic821.ttf') format('truetype'); /* Adjust the path accordingly */
+    src: url('../fonts/monofonto.otf') format('opentype'); /* Adjust the path accordingly */
+}
+@font-face {
+    font-family: Pipboy;
+    src: url('../fonts/monofonto.otf') format('opentype'); /* Adjust the path accordingly */
+}
+
+:root{
+    --green: rgb(117,247,80);
+    --black: rgb(0,0,0);
+}
+
+body{
+    text-decoration: none;
+    background-color: var(--black);
+    color: var(--green);
+    font-family: Pipboy,  'Gill Sans';
+    font-size: 20px;
+    margin: 10px 20px
+}
+
+main{
+    font-size: 10px;
+    text-align: center;
+    padding-top: 10px;
+    opacity: 0;
+}
+
+.skip-link {
+    background-color: var(--black);
+    color: var(--green);
+    padding: 10px 20px;
+    text-decoration: none;
+    position: absolute;
+    top: -1000px;
+    left: 10px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+
+/* Navigation CSS */
+
+ul li a{
+    font-family: Fallout, Arial, Helvetica, sans-serif;
+    color: var(--green);
+    text-decoration: none;
+}
+
+
+#navStyler{
+    border: 1px solid var(--green);
+    width: auto;
+    height: 5px;
+    border-bottom: none;
+}
+
+.secondaryNav{
+    padding-top: 5px;
+}
+.primaryNav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.secondaryNav ul{
+    display: grid;
+    grid-template-columns: 60px 60px 60px;
+    justify-items: center;
+    
+}
+.secondaryNav ul li{
+    text-align: center;
+    width: 60px;
+    padding: 0px;
+}
+
+.secondaryNav ul li a {
+    display: block;
+    font-size: 12px;
+    font-weight: 100;
+    margin: 0px;
+}
+
+.primaryNav .active{
+    border-left: 1px solid var(--green);
+    border-right: 1px solid var(--green);
+    padding: 0px 2px;
+    font-size: 25px;
+}
+
+.secondaryNav .active{
+    border: 1px solid var(--green);
+    border-bottom: none;
+    font-size: 15px;
+}
+.secondaryNav .active a{
+    font-size: 15px;
+}
+
+/* Status CSS */
+.status{
+    padding: 10px;
+    display:grid;
+    grid-template-columns: auto auto auto;
+}
+
+.walkingImg{
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+.walkingImg img{
+    max-width: 140px;
+}
+
+#aboutMe{
+    grid-row: 2/3;
+    grid-column: 1/4;
+}
+
+/* Special Page */
+
+.special{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#specialImg{
+    padding-top: 10px;
+}
+
+#specialDivs div{
+    display:flex;
+    font-size: 15px;
+    padding: 7px;
+    justify-content: space-between;
+}
+
+#specialDivs div:hover, #specialDivs div:focus {
+    background-color: var(--green);
+    color: black;
+}
+
+/* Perk Page */
+
+#top{
+    width: auto;
+    height: 5px;
+    border: 5px var(--green);
+    border-style: none solid double solid;
+}
+
+#mid{
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    height:1px;
+    border: 5px var(--green);
+    border-style: none solid double solid;
+}
+#bot{
+    margin-left: auto;
+    margin-right: auto;
+    width: 30   0px;
+    height:5px;
+    border: 5px var(--green);
+    border-style: double solid none solid;
+}
+
+
+
+
+.gallery-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery {
+    animation: scrollGallery 30s linear infinite;
+}
+
+.gallery-inner {
+    display: flex;
+}
+
+.gallery-inner span {
+    flex: 0 0 auto;
+    margin-right: 10px; /* Adjust spacing between images */
+}
+
+@keyframes scrollGallery {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-320%);
+    }
+}
+
+
+
+
+.gallery div img{
+    width:80px;
+}
+
+.card{
+    flex: 0 0 auto; /* This ensures the width of the card is determined by its content */
+    width: auto; /* Set a fixed width for each card */
+    margin: 0 10px;
+    border-radius: 5px;
+}
+.card h2{
+    font-size: 30px;
+    margin-bottom: 2px;
+}
+
+
+/* Projects CSS */
+
+.project{
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#projects-container{
+    margin-top: 15px;
+}
+
+.project div img{
+    max-width: 125px;
+    margin: 4px 0 3px 0;
+}
+
+.project div p{
+    margin: 2px;
+    display: inline-block;
+}
+
+.project div h2{
+    display: inline-block;
+    font-size: 15px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+.project div p{
+    display: inline-block;
+    font-size: 10px;
+}
+
+/* Next css */
+.nextProjects{
+    display: flex;
+    flex-direction: column;
+}
+.nextProjects div h2{
+    font-size: 20px;
+}
+#contact-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 8px;
+}
+#contact-section div{
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-section div a{
+    color: var(--green);
+    text-decoration: none;
+}
+
+/* Tablet View */
+@media only screen and (min-width: 768px) {
+    /* Status */
+    
+    .status{
+        /* grid-template-columns: auto auto auto; */
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #aboutMe{
+        max-width: 450px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    /* Special */
+    .special{
+        grid-gap: 40px;
+    }
+    #specialImgBio{
+        font-size: 15px;
+    }
+
+    /* Perk */
+    @keyframes scrollGallery {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-150%);
+        }
+    }
+
+    
+    .gallery {
+        animation: scrollGallery 18s linear infinite;
+    }
+}
+
+/* Desktop View */
+@media only screen and (min-width: 1024px) {
+    /* Status */
+    /* I think it looks great as is */
+
+    /* Special */
+    .special{
+        margin: 60px 0;
+    }
+    #specialDivs{
+        width: 80%;
+    }
+    
+    #specialImg{
+        margin: 20px 0;
+    }
+
+    /* Perk */
+    @keyframes scrollGallery {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-110%);
+        }
+    }
+    #bot{
+        width:650px
+    }
+
+    
+    .gallery {
+        animation: scrollGallery 17s linear infinite;
+    }
+    
+    .gallery-wrapper{
+        margin:40px 0;
+    }
+}

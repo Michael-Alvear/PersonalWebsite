@@ -1,0 +1,178 @@
+@font-face {
+    font-family: Fallout;
+    src: url('../fonts/Gothic821.ttf') format('truetype'); /* Adjust the path accordingly */
+    src: url('../fonts/monofonto.otf') format('opentype'); /* Adjust the path accordingly */
+}
+@font-face {
+    font-family: Pipboy;
+    src: url('../fonts/monofonto.otf') format('opentype'); /* Adjust the path accordingly */
+}
+
+:root{
+    --green: rgb(117,247,80);
+    --black: rgb(0,0,0);
+}
+
+body{
+    text-decoration: none;
+    background-color: var(--black);
+    color: var(--green);
+    font-family: Pipboy,  'Gill Sans';
+    font-size: 20px;
+    margin: 10px 20px
+}
+
+main{
+    font-size: 10px;
+    text-align: center;
+    padding-top: 10px;
+    opacity: 0;
+}
+
+
+/* Navigation CSS */
+
+ul li a{
+    font-family: Fallout, Arial, Helvetica, sans-serif;
+    color: var(--green);
+    text-decoration: none;
+}
+
+
+#navStyler{
+    border: 1px solid var(--green);
+    width: auto;
+    height: 5px;
+    border-bottom: none;
+}
+
+.secondaryNav{
+    padding-top: 5px;
+}
+.primaryNav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.secondaryNav ul{
+    display: grid;
+    grid-template-columns: 60px ;
+    justify-items: center;
+    justify-content: end;
+    align-items: center;
+    
+}
+.secondaryNav ul li{
+    text-align: center;
+    width: 60px;
+    padding: 0px;
+}
+
+.secondaryNav ul li a {
+    display: block;
+    font-size: 12px;
+    font-weight: 100;
+    margin: 0px;
+}
+
+.primaryNav .active{
+    border-left: 1px solid var(--green);
+    border-right: 1px solid var(--green);
+    padding: 0px 2px;
+    font-size: 25px;
+}
+
+.secondaryNav .active{
+    border: 1px solid var(--green);
+    border-bottom: none;
+    font-size: 15px;
+}
+.secondaryNav .active a{
+    font-size: 15px;
+}
+
+.skip-link {
+    background-color: var(--black);
+    color: var(--green);
+    padding: 10px 20px;
+    text-decoration: none;
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+
+#radioContainer{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 20px 0 ;
+}
+
+p{
+    font-size: 20px;
+}
+video{
+    display: none;
+}
+
+#radioContainer img{
+    width: 100px;
+}
+    
+.activeSong{
+    background-color: var(--green);
+    color: var(--black);
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: 2px solid var(--green);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover{
+    background-color: rgb(117,247,80,.8);
+    color: black;
+}
+button:active{
+    background-color: rgb(117,247,80,.5);
+    color: black;
+}
+
+#radioContainer ul li{
+    font-size: 14px;
+    height: 30px;
+}
+
+
+
+/* Tablet View */
+@media only screen and (min-width: 768px) {
+    #radioContainer{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Desktop View */
+@media only screen and (min-width: 1024px) {
+    #radioContainer{
+        grid-template-columns: 1fr 1fr;
+        margin: 50px 0;
+    }
+
+    #radioContainer ul li{
+        font-size: 25px;
+        height: 50px;
+    }
+}
