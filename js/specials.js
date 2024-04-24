@@ -28,6 +28,6 @@ for (let i = 0; i < specials.length; ++i) {
 let targetImg = document.getElementById("specialImg");
 let targetBio = document.getElementById("specialImgBio");
 function hoverSpecial(event, index){
-    targetImg.src = '/images/special' + index +'.gif';
+    targetImg.src = '../PersonalWebsite/images/special' + index +'.gif';
     targetBio.innerHTML = specialTexts[index];
 }
