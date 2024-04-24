@@ -1,6 +1,6 @@
 var video;
 let activeSong =0;
-let sources = ["../images/bigIron.mp3", "../images/kick.mp3"];
+let sources = ["https://michael-alvear.github.io/PersonalWebsite/images/bigIron.mp3", "https://michael-alvear.github.io/PersonalWebsite/images/kick.mp3"];
 data = document.body.getElementsByTagName("main")[0];
 songs = document.getElementById("radioContainer").getElementsByTagName("ul")[0].getElementsByTagName("li");
 songs[0].classList.add("activeSong");
